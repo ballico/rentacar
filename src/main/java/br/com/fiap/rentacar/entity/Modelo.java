@@ -20,5 +20,8 @@ public class Modelo {
     private String nome;
     @Column(name = "NR_POTENCIA")
     private BigDecimal potencia;
-//    private Marca marca;
+    @ManyToOne
+    //N -> 1
+    @JoinColumn(name = "ID_MARCA")
+    private Marca marca;
 }
